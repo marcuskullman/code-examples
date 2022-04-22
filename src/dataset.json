@@ -1,0 +1,82 @@
+[
+  {
+    "variation": "a",
+    "converted": true
+  },
+  {
+    "variation": "a",
+    "converted": true
+  },
+  {
+    "variation": "a",
+    "converted": false
+  },
+  {
+    "variation": "b",
+    "converted": false
+  },
+  {
+    "variation": "b",
+    "converted": false
+  },
+  {
+    "variation": "b",
+    "converted": true
+  },
+  {
+    "variation": "a",
+    "converted": false
+  },
+  {
+    "variation": "b",
+    "converted": false
+  },
+  {
+    "variation": "a",
+    "converted": false
+  },
+  {
+    "variation": "b",
+    "converted": true
+  },
+  {
+    "variation": "a",
+    "converted": false
+  },
+  {
+    "variation": "a",
+    "converted": false
+  },
+  {
+    "variation": "b",
+    "converted": true
+  },
+  {
+    "variation": "a",
+    "converted": true
+  },
+  {
+    "variation": "b",
+    "converted": false
+  },
+  {
+    "variation": "a",
+    "converted": false
+  },
+  {
+    "variation": "a",
+    "converted": false
+  },
+  {
+    "variation": "b",
+    "converted": true
+  },
+  {
+    "variation": "b",
+    "converted": true
+  },
+  {
+    "variation": "b",
+    "converted": false
+  }
+]
