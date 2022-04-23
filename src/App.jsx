@@ -12,9 +12,8 @@ const App = () => {
     }
   )
 
-  const handleChange = ({ target: { name, value } }) => {
+  const handleChange = ({ target: { name, value } }) =>
     setState({ [name]: value })
-  }
 
   const permutationTest = usePermutationTest({ dataset })
   console.log("Permutationstest:", permutationTest)
