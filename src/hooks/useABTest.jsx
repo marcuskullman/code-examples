@@ -51,6 +51,7 @@ export const useABTest = ({ a, b }) => {
       pValue,
       zScore,
       power,
+      seDiff,
       positive: b.conversionRate > a.conversionRate,
       statisticalSignificance: `${(100 * statisticalSignificance).toFixed(2)}%`,
     },
