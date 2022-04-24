@@ -1,4 +1,4 @@
-export const reduceData = (dataset, shuffle) => {
+const reduceData = (dataset, shuffle) => {
   if (shuffle) {
     shuffle = [...dataset]
   }
@@ -62,7 +62,7 @@ export const usePermutationTest = ({ dataset, simulations = 5000 }) => {
 
   return {
     sample,
-    testData: {
+    permutationTest: {
       simulations,
       distribution,
       pValue,

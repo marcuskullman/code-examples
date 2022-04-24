@@ -41,14 +41,17 @@ const sampleSizeEstimate = (
   return roundToSigFigs(sampleEstimate)
 }
 
+// Additionally you can also pass a start time and override the default fixed horizon
 export const useSampleSizeCalculator = ({
-  MDE,
-  CR,
   a,
   b,
   testStatistic,
+  MDE,
+  CR,
   mean,
   startTime = +new Date(),
+  minDays = 14,
+  minConversionsPerSample = 100,
 }) => {
   if ((MDE && (isNaN(MDE) || MDE < 1)) || (CR && (isNaN(CR) || CR < 1))) {
     alert("Leave blank or enter a positive number.")
@@ -59,19 +62,14 @@ export const useSampleSizeCalculator = ({
   const baselineCR = CR ? parseFloat(CR / 100) : mean
   const sampleSize = sampleSizeEstimate(relativeMDE, baselineCR)
 
-  const minDays = 14
-  const minConversionsPerSample = 100
-
-  const enoughConversions =
+  const fhConversions =
     a.conversions >= minConversionsPerSample &&
     b.conversions >= minConversionsPerSample
-  const enoughDays =
+  const fhDuration =
     Math.ceil((minDays * 86400000 - (+new Date() - startTime)) / 86400000) <= 0
 
   return {
-    testData: {
-      sampleSize: `${sampleSize} (per variation)`,
-      fixedHorizon: enoughConversions && enoughDays,
-    },
+    sampleSize: `${sampleSize} (per variation)`,
+    fixedHorizon: fhConversions && fhDuration,
   }
 }
